@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Career Recommendation Advisor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Career Recommendation Advisor</h1>
+    <p>Understand where your skills fit best</p>
+</header>
+
+<main class="wrapper">
+    <section class="form-section">
+        <h2>Your Profile</h2>
+
+        <label>Skills</label>
+        <input id="skills" placeholder="python, sql, machine learning">
+
+        <label>Interests</label>
+        <input id="interests" placeholder="analytics, ai">
+
+        <label>Strengths</label>
+        <input id="strengths" placeholder="problem solving, communication">
+
+        <button onclick="getCareer()">Analyze Career Fit</button>
+
+        <div id="loading" class="loading hidden">
+            Analyzing your profile…
+        </div>
+    </section>
+
+    <section class="result-section">
+        <h2>Career Recommendations</h2>
+        <div id="results" class="results-placeholder">
+            Fill your profile to get recommendations.
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    AI-Assisted Career Guidance • Explainable Recommendations
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+

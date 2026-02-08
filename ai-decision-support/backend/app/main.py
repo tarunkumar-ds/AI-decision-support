@@ -5,17 +5,14 @@ from app.engine.scorer import score_user_for_role
 from app.engine.explainer import generate_explanation
 from fastapi.middleware.cors import CORSMiddleware
 
-
 app = FastAPI(title="Career Decision Support System")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # allow frontend access
+    allow_origins=["*"],   
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
 
 @app.post("/recommend-career")
 def recommend_career(user: UserProfile):
@@ -40,3 +37,4 @@ def recommend_career(user: UserProfile):
     return {
         "recommended_roles": results[:3]
     }
+
